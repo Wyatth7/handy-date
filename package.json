@@ -2,7 +2,8 @@
   "name": "handy-date",
   "version": "1.0.0",
   "description": "Implements commonly used date functionalities to minimize the need for the Javascript Date class.",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "/lib/index.d.ts",
   "scripts": {
     "build": "tsc"
   },
