@@ -6,14 +6,15 @@ A package which uses the Javascript `Date` class to create a simple, non repetat
 
 - [`currentDateString()`](#currentdatestring)
 - [`currentDateMili()`](#currentdatemili)
-- [`dateToMili()`](#datetomili)
-- [`miliToDate()`](#militodate)
-- [`subtractDayMili()`](#subtractdaymili)
-- [`betweenDates()`](#betweendates)
-- [`formatDate()`](#formatdate)
-- [`getMonthFromString()`](#getmonthfromstring)
+- [`dateToMili(mili)`](#datetomilimili)
+- [`miliToDate(date)`](#militodatedate)
+- [`subtractDayMili(days)`](#subtractdaymilidays)
+- [`subtractMonthMili(months)`](#subtractmonthmilimonths)
+- [`betweenDates(from, to, checkDate)`](#betweendatesfrom-to-checkDate)
+- [`formatDate(date)`](#formatdatedate)
+- [`getMonthFromString(month)`](#getmonthfromstringmonth)
 
-#### `currentDateString()`
+## `currentDateString()`
 
 Gets present date in string form (`toString()` format).
 
@@ -26,7 +27,7 @@ const now = HandyDate.currentDateString();
 
 ```
 
-#### `currentDateMili()`
+## `currentDateMili()`
 
 Gets present date in miliseconds.
 
@@ -38,7 +39,7 @@ const now = Handydate.currentDateMili();
 // now = 1608409521469
 ```
 
-#### `miliToDate(mili)`
+## `miliToDate(mili)`
 
 Convert miliseconds to a date string.
 
@@ -54,7 +55,7 @@ const date = HandyDate.miliToDate(mili);
 // date = "Sat Dec 19 2020 15:25:21 GMT-0500 (Eastern Standard Time)"
 ```
 
-#### `dateToMili(date)`
+## `dateToMili(date)`
 
 Convert date string to miliseconds.
 
@@ -70,7 +71,7 @@ const mili = HandyDate.dateToMili(date);
 // mili = 1608409521000
 ```
 
-#### `subtractDayMili(days)`
+## `subtractDayMili(days)`
 
 Subtract days from a date.
 
@@ -86,7 +87,7 @@ const yesterday = HandyDate.subtractDayMili(days);
 // yesterday = 1608323556000
 ```
 
-#### `subtractMonthMili(months)`
+## `subtractMonthMili(months)`
 
 Subtract months from a date.
 
@@ -102,7 +103,7 @@ const lastMonth = HandyDate.subtractDayMili(months);
 // lastMonth = 1605818075000
 ```
 
-#### `betweenDates(from, to, checkDate)`
+## `betweenDates(from, to, checkDate)`
 
 To get this date format, use the static `currentDateString()` or `miliToDate()` function in this class.
 
@@ -128,7 +129,7 @@ const date = HandyDate.betweenDates(from, to, toCheck);
 // date = true
 ```
 
-#### `formatDate(date)`
+## `formatDate(date)`
 
 Formats date in mm/dd/yyyy format.
 
@@ -146,7 +147,7 @@ Returns a string in mm/dd/yyyy format.
   // formatted = "12/12/2020"
 ```
 
-#### `getMonthFromString(month)`
+## `getMonthFromString(month)`
 
 `month` One month out of the year.
 
